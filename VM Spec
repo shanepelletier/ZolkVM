@@ -1,0 +1,27 @@
+ADD <reg1> <reg2>
+- Adds the value of reg2 onto the value of reg1
+SUB <reg1> <reg2>
+- Subtracts the value of reg2 from the value of reg1
+MUL <reg1> <reg2>
+- Multiplies the values of reg1 and reg2, stores result in reg1
+DIV <reg1> <reg2>
+- Divides the value of reg1 by the value of reg2
+PUT <output file> <reg1>
+- Outputs value of reg1 to output file
+GET <input file> <reg1>
+- Reads value of input file into reg1
+
+Registers are strings, that can be transformed into integers when needed
+VM only supports integers
+
+Registers
+R0
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
