@@ -1,0 +1,3 @@
+ZolkVM - An attempt to write a VM in C
+
+See "VM Spec" for specification of VM instructions.
