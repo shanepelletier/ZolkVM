@@ -1,5 +1,6 @@
-# Executable (hackish, I know)
+# Executables for ZolkVM (hackish, I know)
 zolk
+zasm
 
 # Object files
 *.o

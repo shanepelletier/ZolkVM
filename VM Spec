@@ -15,6 +15,7 @@ GET <input file> <reg1>
 
 Registers are integers
 VM only supports integers
+PC is the program counter, cannot be accessed from within a program.
 
 Registers
 R0
@@ -27,3 +28,4 @@ R6
 R7
 R8
 R9
+PC

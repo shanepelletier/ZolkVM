@@ -1,5 +1,5 @@
 /*
-    ZolkVM - An attempt to to wite a VM in C
+    ZASM - An assembler for ZolkVM
     Copyright (C) 2013 Shane M. Pelletier
 
     This program is free software: you can redistribute it and/or modify
@@ -15,45 +15,6 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
-
-#include <stdlib.h>
-#include <stdio.h>
-
-enum OPCODES
-{
-	ADD,
-	SUB,
-	MUL,
-	DIV,
-	PUT,
-	GET
-};
-
-enum INFILES
-{
-	STDIN
-};
-
-enum OUTFILES
-{
-	STDOUT,
-	STDERR,
-};
-
-struct Registers
-{
-	int R0;
-	int R1;
-	int R2;
-	int R3;
-	int R4;
-	int R5;
-	int R6;
-	int R7;
-	int R8;
-	int R9;
-	int PC;
-};
 
 int main(int argc, char *argv[])
 {
