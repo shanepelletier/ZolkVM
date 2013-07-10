@@ -1,3 +1,5 @@
+MOV <reg1> <reg2/value>
+- Moves either value or the value of reg2 into reg1
 ADD <reg1> <reg2>
 - Adds the value of reg2 onto the value of reg1
 SUB <reg1> <reg2>
@@ -11,7 +13,7 @@ PUT <output file> <reg1>
 GET <input file> <reg1>
 - Reads value of input file into reg1
 
-Registers are strings, that can be transformed into integers when needed
+Registers are integers
 VM only supports integers
 
 Registers

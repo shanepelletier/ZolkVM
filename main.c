@@ -16,6 +16,41 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+enum OPCODES
+{
+	ADD,
+	SUB,
+	MUL,
+	DIV,
+	PUT,
+	GET
+};
+
+enum INFILES
+{
+	STDIN
+};
+
+enum OUTFILES
+{
+	STDOUT,
+	STDERR,
+};
+
+struct Registers
+{
+	int R0;
+	int R1;
+	int R2;
+	int R3;
+	int R4;
+	int R5;
+	int R6;
+	int R7;
+	int R8;
+	int R9;
+};
+
 int main(int argc, char *argv[])
 {
 	return 0;
