@@ -1,3 +1,3 @@
-ZolkVM - An attempt to write a VM in C
+ZolkVM - An attempt to write a MIPS VM and assembler in C
 
-See "VM Spec" for specification of VM instructions.
+I'm doing this mostly for learning purposes, so my code will not be as effecient as it could be.
