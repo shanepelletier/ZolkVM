@@ -16,7 +16,24 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
+#include <stdlib.h>
+#include <stdio.h>
+
 int main(int argc, char *argv[])
 {
+	FILE *file = NULL;
+	if (file != NULL)
+	{
+		char line[256];
+		while (fgets(line, sizeof(line), file) != NULL)
+		{
+			fputs(line, stdout);
+		}
+		fclose(file);
+	}
+	else
+	{
+		perror("test.zasm");
+	}
 	return 0;
 }
