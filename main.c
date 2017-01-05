@@ -19,44 +19,48 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/* All arithmetic instructions are defined as 0x<funct><opcode>,except for
+ * instructions with no <funct>, which are only defined as 0x<opcode>.
+ */
+
 /* CPU Arithmetic Instructions */
-#define ADD
-#define ADDI
-#define ADDIU
-#define ADDU
-#define CLO
-#define CLZ
-#define DIV
-#define DIVU
+#define ADD 0x2000
+#define ADDI  0x8
+#define ADDIU 0x9
+#define ADDU 0x2100
+#define CLO 0x211C
+#define CLZ 0x201C
+#define DIV 0x1A00
+#define DIVU 0x1B00
 #define MADD
 #define MADDU
 #define MSUB
 #define MSUBU
 #define MUL
-#define MULT
-#define MULTU
-#define SLT
-#define SLTI
-#define SLTIU
-#define SLTU
-#define SUB
-#define SUBU
+#define MULT 0x1800
+#define MULTU 0x1900
+#define SLT 0x2A00
+#define SLTI 0x0A
+#define SLTIU 0x0B
+#define SLTU 0x002B
+#define SUB 0x2200
+#define SUBU 0x2300
+
+/* NOTE: will have to come back to these. */
 
 /* CPU Branch and Jump Instructions */
-#define B
-#define BAL
-#define BEQ
+#define BEQ 0x04
 #define BGEZ
 #define BGEZAL
 #define BGTZ
 #define BLEZ
 #define BLTZ
 #define BLTZAL
-#define BNE
-#define J
-#define JAL
+#define BNE 0x05
+#define J 0x2
+#define JAL 0x3
 #define JALR
-#define JR
+#define JR 0x0800
 
 /* CPU Instruction Control Instructions */
 #define NOP
@@ -64,11 +68,11 @@
 
 /* CPU Load, Store, and Memory Control Instructions */
 #define LB
-#define LBU
+#define LBU 0x24
 #define LH
-#define LHU
+#define LHU 0x25
 #define LL
-#define LW
+#define LW 0x23
 #define LWL
 #define LWR
 #define PREF
@@ -76,24 +80,24 @@
 #define SC
 #define SD
 #define SH
-#define SW
+#define SW 0x2B
 #define SWL
 #define SWR
 #define SYNC
 
 /* CPU Logical Instructions */
-#define AND
-#define ANDI
+#define AND 0x2400
+#define ANDI 0xC
 #define LUI
-#define NOR
-#define OR
-#define ORI
-#define XOR
+#define NOR 0x2700
+#define OR 0x2500
+#define ORI 0x0D
+#define XOR 0x2600
 #define XORI
 
 /* CPU Move Instructions */
-#define MFHI
-#define MFLO
+#define MFHI 0x1000
+#define MFLO 0x1200
 #define MOVF
 #define MOVN
 #define MOVT
@@ -102,9 +106,9 @@
 #define MTLO
 
 /* CPU Shift Instructions */
-#define SLL
-#define SLLV
-#define SRA
+#define SLL 0x0
+#define SLLV 0x0200
+#define SRA 0x0300
 #define SRAV
 #define SRL
 #define SRLV
@@ -173,6 +177,30 @@ struct Registers
 	int R7;
 	int R8;
 	int R9;
+  int R10;
+  int R11;
+  int R12;
+  int R13;
+  int R14;
+  int R15;
+  int R16;
+  int R17;
+  int R18;
+  int R19;
+  int R20;
+  int R21;
+  int R22;
+  int R23;
+  int R24;
+  int R25;
+  int R26;
+  int R27;
+  int R28;
+  int R29;
+  int R30;
+  int R31;
+  int HI;
+  int LO;
 	int PC;
 };
 
