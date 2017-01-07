@@ -19,32 +19,32 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-/* All arithmetic instructions are defined as 0x<funct><opcode>,except for
+/* All arithmetic instructions are defined as 0x<opcode><funct>,except for
  * instructions with no <funct>, which are only defined as 0x<opcode>.
  */
 
 /* CPU Arithmetic Instructions */
-#define ADD 0x2000
+#define ADD 0x20
 #define ADDI  0x8
 #define ADDIU 0x9
-#define ADDU 0x2100
-#define CLO 0x211C
-#define CLZ 0x201C
-#define DIV 0x1A00
-#define DIVU 0x1B00
-#define MADD
-#define MADDU
-#define MSUB
-#define MSUBU
+#define ADDU 0x21
+#define CLO 0x1C21
+#define CLZ 0x1C20
+#define DIV 0x1A
+#define DIVU 0x1B
+#define MADD 0x1C
+#define MADDU 0x1C1
+#define MSUB 0x1C4
+#define MSUBU 0x705
 #define MUL
-#define MULT 0x1800
-#define MULTU 0x1900
-#define SLT 0x2A00
+#define MULT 0x18
+#define MULTU 0x19
+#define SLT 0x2A
 #define SLTI 0x0A
 #define SLTIU 0x0B
-#define SLTU 0x002B
-#define SUB 0x2200
-#define SUBU 0x2300
+#define SLTU 0x2B00
+#define SUB 0x22
+#define SUBU 0x23
 
 /* NOTE: will have to come back to these. */
 
@@ -206,5 +206,7 @@ struct Registers
 
 int main(int argc, char *argv[])
 {
+  int testprogram[1] = {0x20210005};
+  printf(testprogram[1]);
 	return 0;
 }
